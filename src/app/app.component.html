@@ -1,0 +1,9 @@
+<div class="module">
+  <p class="name">app.component</p>
+  <button (click)="clear()">CLEAR ALL</button>
+  <b style="margin-left: 50px;">SUM TOTAL : ${{ sumTotal$ | async }}</b>
+  <b style="margin-left: 50px;">SUM TAX : ${{ sumTax$ | async }}</b>
+  <app-items></app-items>
+  <app-invoices></app-invoices>
+  <app-invoices-search></app-invoices-search>
+</div>
