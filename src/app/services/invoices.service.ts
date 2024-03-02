@@ -35,6 +35,6 @@ export class InvoicesService {
   }
 
   sumTax(){
-    return this.getAll().pipe(map(invoices => invoices.reduce((acc, curr) => acc + curr.tax, 0)))
+    return this.getAll().pipe(map(invoices => (invoices.reduce((acc, curr) => acc + curr.subtotal, 0) - invoices.reduce((acc, curr) => acc + curr.total, 0))))
   }
 }
