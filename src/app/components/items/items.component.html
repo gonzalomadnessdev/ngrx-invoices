@@ -23,8 +23,19 @@
   </div>
 
   <h5>items:</h5>
-  <div style="max-height: 400px; overflow-y: scroll; border: 1px solid #000 ; margin-bottom: 30px;">
-    <pre>{{ items | json }}</pre>
+  <div style="max-height: 400px; overflow-y: scroll ; margin-bottom: 30px;">
+    <table>
+      <tr>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Units</th>
+      </tr>
+      <tr *ngFor="let item of items">
+        <td>{{ item.description }}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.units }}</td>
+      </tr>
+    </table>
 
   </div>
 
